@@ -52,7 +52,7 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
 })
 //get last workout
 router.get("/api/workouts/range", ({ body }, res) => {
-    Workout.fnd({}).limit(7);
+    Workout.find({}).limit(7);
     Workout.aggregate([
         {
             $addFields: {
